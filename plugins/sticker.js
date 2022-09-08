@@ -1,10 +1,11 @@
 exports.run = {
-   usage: ['s', 'sk', 'stiker', 'sticker', 'sgif'],
+   usage: ['s', 'sk', '​​​​.', '​​​​​​,'],
    async: async (m, {
       client,
       text,
       isPrefix,
       command
+
    }) => {
       try {
          if (m.quoted ? m.quoted.message : m.msg.viewOnce) {
@@ -19,7 +20,7 @@ exports.run = {
                })
             } else if (/image/.test(type)) {
                return await client.sendSticker(m.chat, img, m, {
-                  packname: 'by',
+                  packname: 'No Bot Wa',
                   author: 'neoxr'
                })
             }

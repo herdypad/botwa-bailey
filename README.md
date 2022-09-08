@@ -1,5 +1,8 @@
 ### 乂  Database Setup
 
+ini udah di up ke github
+
+
 Create a heroku account, then go to the add-ons page and add Heroku Postgres. 
 
 <b>READ THIS !!</b> If you are using another server like RDP/VPS, Railway, etc. Go to the config variables page on heroku and copy the postgress database url and paste it in the .env file

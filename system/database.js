@@ -1,29 +1,6 @@
 module.exports = (m) => {
    const isNumber = x => typeof x === 'number' && !isNaN(x)
-   let user = global.db.users[m.sender]
-   if (user) {
-      if (!('banned' in user)) user.banned = false
-      if (!isNumber(user.banTemp)) user.banTemp = 0
-      if (!isNumber(user.banTimes)) user.banTimes = 0
-      if (!isNumber(user.limit)) user.limit = global.limit
-      if (!('premium' in user)) user.premium = false
-      if (!isNumber(user.lastseen)) user.lastseen = 0
-      if (!isNumber(user.hit)) user.hit = 0
-      if (!isNumber(user.spam)) user.spam = 0
-      if (!isNumber(user.warning)) user.warning = 0
-   } else {
-      global.db.users[m.sender] = {
-         banned: false,
-         banTemp: 0,
-         banTimes: 0,
-         limit: global.limit,
-         premium: false,
-         lastseen: 0,
-         hit: 0,
-         spam: 0,
-         warning: 0
-      }
-   }
+   
 
    if (m.isGroup) {
       let group = global.db.groups[m.chat]
